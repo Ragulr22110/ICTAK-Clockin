@@ -132,6 +132,11 @@ const Employee = () => {
                     <div className="col-sm-12 col-lg-2">
                         <select className="form-select w-100" value={project} onChange={handleProject}>
                             <option value="">Project</option>
+                            <option value="Work from Office">Academic</option>
+                            <option value="Work from Home">Corporate</option>
+                            <option value="Work from Office">Retail</option>
+                            <option value="Work from Home">Administration</option>
+                            <option value="Work from Home">Government</option>
                             {projectData.map((item, index) => {
                                 return (
                                     <option key={index} value={item.label}>{item.label}</option>
@@ -142,6 +147,10 @@ const Employee = () => {
                     <div className="col-sm-12 col-lg-2">
                         <select className="form-select w-100" value={task} onChange={handleTask}>
                             <option value="">Task</option>
+                            <option value="Training">Training</option>
+                            <option value="Meeting & Discussion">Meeting & Discussion</option>
+                            <option value="Content Development">Content Development</option>
+                            <option value="Lark Activity">Lark Activity</option>
                             {taskData.map((item, index) => {
                                 return (
                                     <option key={index} value={item.label}>{item.label}</option>
