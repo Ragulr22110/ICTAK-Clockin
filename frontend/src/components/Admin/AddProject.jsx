@@ -31,7 +31,7 @@ const AddProject = () => {
             alert('Task Empty');
         }
         else {
-            let res = await axios.post('/api/task', { label, token });
+            let res = await axios.post('http://localhost:5000/api/task', { label, token });
             if (res.data) {
                 alert('Task Added Successfully');
             } else {
@@ -50,7 +50,7 @@ const AddProject = () => {
 
         // fetch task
         const getTask = async () => {
-            let task = await axios.post('/api/tasks', { token });
+            let task = await axios.post('http://localhost:5000/api/tasks', { token });
             setTaskData(task.data);
         }
         getTask();

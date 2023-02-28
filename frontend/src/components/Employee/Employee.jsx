@@ -86,7 +86,7 @@ const Employee = () => {
         // fetch tracker history
         const getData = async () => {
             try {
-                let response = await axios.post(`/api/tracker/${_id}`, { token });
+                let response = await axios.post(`http://localhost:5000/api/tracker/${_id}`, { token });
                 setApiData(response.data);
             } catch (error) {
                 console.log(error.message);
